@@ -37,7 +37,7 @@ export function Location() {
             <div className="mt-6 overflow-hidden rounded-2xl border border-forest-bark/10 bg-forest-cream/60">
               {!photoFailed ? (
                 <img
-                  src="/photos/XXXL.webp"
+                  src="/forest-park-1.jpg"
                   alt="Локация Forest Park"
                   className="h-56 w-full object-cover"
                   loading="lazy"
@@ -47,7 +47,7 @@ export function Location() {
                 <div className="flex h-56 flex-col items-center justify-center gap-2 px-4 text-center text-forest-bark/70">
                   <ImageOff size={22} />
                   <p className="text-sm">
-                    Добавьте фото локации в файл <code>/public/photos/XXXL.webp</code>
+                    Добавьте фото локации в файл <code>/public/forest-park-1.jpg</code>
                   </p>
                 </div>
               )}
@@ -58,7 +58,7 @@ export function Location() {
               <div className="mt-3 overflow-hidden rounded-2xl border border-forest-bark/10 bg-forest-cream/60">
                 {!secondPhotoFailed ? (
                   <img
-                    src="/photos/XXXL-2.webp"
+                    src="/forest-park-2.jpeg"
                     alt="Forest Park, дополнительное фото"
                     className="h-56 w-full object-cover"
                     loading="lazy"
@@ -68,7 +68,7 @@ export function Location() {
                   <div className="flex h-56 flex-col items-center justify-center gap-2 px-4 text-center text-forest-bark/70">
                     <ImageOff size={22} />
                     <p className="text-sm">
-                      Добавьте второе фото локации в файл <code>/public/photos/XXXL-2.webp</code>
+                      Добавьте второе фото локации в файл <code>/public/forest-park-2.jpeg</code>
                     </p>
                   </div>
                 )}
