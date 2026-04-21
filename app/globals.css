@@ -16,6 +16,24 @@ body {
     radial-gradient(circle at 14% 12%, rgba(244, 233, 205, 0.42), transparent 34%),
     radial-gradient(circle at 86% 18%, rgba(233, 217, 184, 0.3), transparent 36%),
     linear-gradient(180deg, #f8f1df 0%, #f4ead4 55%, #efe2c8 100%);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.95;
+  background-image:
+    radial-gradient(circle at 8% 14%, rgba(126, 163, 98, 0.28) 0, rgba(126, 163, 98, 0.28) 36px, transparent 37px),
+    radial-gradient(circle at 92% 12%, rgba(126, 163, 98, 0.22) 0, rgba(126, 163, 98, 0.22) 30px, transparent 31px),
+    radial-gradient(circle at 16% 46%, rgba(126, 163, 98, 0.2) 0, rgba(126, 163, 98, 0.2) 22px, transparent 23px),
+    radial-gradient(circle at 88% 44%, rgba(126, 163, 98, 0.22) 0, rgba(126, 163, 98, 0.22) 28px, transparent 29px),
+    radial-gradient(circle at 10% 78%, rgba(126, 163, 98, 0.24) 0, rgba(126, 163, 98, 0.24) 32px, transparent 33px),
+    radial-gradient(circle at 90% 82%, rgba(126, 163, 98, 0.24) 0, rgba(126, 163, 98, 0.24) 32px, transparent 33px),
+    radial-gradient(circle at 50% 70%, rgba(126, 163, 98, 0.16) 0, rgba(126, 163, 98, 0.16) 24px, transparent 25px);
 }
 
 .section-shell {

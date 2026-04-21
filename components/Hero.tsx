@@ -77,19 +77,10 @@ export function Hero() {
           <ellipse cx="98" cy="154" rx="13" ry="24" fill="currentColor" transform="rotate(26 98 154)" />
           <ellipse cx="78" cy="190" rx="12" ry="22" fill="currentColor" transform="rotate(14 78 190)" />
         </svg>
-        <svg
-          className="absolute inset-x-0 bottom-0 h-28 w-full text-[#6a8f56]/32"
-          viewBox="0 0 1200 140"
-          preserveAspectRatio="none"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M0 140L20 95L40 140L60 82L80 140L100 90L120 140L140 84L160 140L180 92L200 140L220 86L240 140L260 94L280 140L300 88L320 140L340 96L360 140L380 90L400 140L420 85L440 140L460 92L480 140L500 84L520 140L540 95L560 140L580 89L600 140L620 84L640 140L660 96L680 140L700 90L720 140L740 86L760 140L780 94L800 140L820 88L840 140L860 96L880 140L900 90L920 140L940 85L960 140L980 92L1000 140L1020 84L1040 140L1060 95L1080 140L1100 88L1120 140L1140 94L1160 140L1180 90L1200 140V140H0Z"
-            fill="currentColor"
-          />
-        </svg>
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#6f925a]/20 to-transparent" />
+        <div className="absolute left-[18%] top-[14%] h-12 w-12 rounded-full bg-[#7da265]/35 blur-[0.5px]" />
+        <div className="absolute left-[72%] top-[18%] h-14 w-14 rounded-full bg-[#7da265]/30 blur-[0.5px]" />
+        <div className="absolute left-[64%] top-[62%] h-10 w-10 rounded-full bg-[#7da265]/28 blur-[0.5px]" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#6f925a]/14 to-transparent" />
       </div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f8f1df]/70 to-[#efe2c8]/82" />
       <div className="section-shell relative z-10">
