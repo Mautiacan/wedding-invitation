@@ -7,7 +7,7 @@ import { EVENT_INFO, MAP_EMBED_URL, MAP_ROUTE_URL } from "@/lib/constants";
 
 export function Location() {
   const [photoFailed, setPhotoFailed] = useState(false);
-  const [transferPhotoFailed, setTransferPhotoFailed] = useState(false);
+  const [secondPhotoFailed, setSecondPhotoFailed] = useState(false);
 
   return (
     <section id="location" className="section-divider-top py-20">
@@ -54,21 +54,21 @@ export function Location() {
             </div>
 
             <div className="mt-6">
-              <p className="text-sm font-medium text-forest-bark/85">Место трансфера</p>
+              <p className="text-sm font-medium text-forest-bark/85">Forest Park</p>
               <div className="mt-3 overflow-hidden rounded-2xl border border-forest-bark/10 bg-forest-cream/60">
-                {!transferPhotoFailed ? (
+                {!secondPhotoFailed ? (
                   <img
-                    src="/transfer-point.jpg"
-                    alt="Место сбора на трансфер"
+                    src="/forest-park-2.jpg"
+                    alt="Forest Park, дополнительное фото"
                     className="h-56 w-full object-cover"
                     loading="lazy"
-                    onError={() => setTransferPhotoFailed(true)}
+                    onError={() => setSecondPhotoFailed(true)}
                   />
                 ) : (
                   <div className="flex h-56 flex-col items-center justify-center gap-2 px-4 text-center text-forest-bark/70">
                     <ImageOff size={22} />
                     <p className="text-sm">
-                      Добавьте фото точки трансфера в файл <code>/public/transfer-point.jpg</code>
+                      Добавьте второе фото локации в файл <code>/public/forest-park-2.jpg</code>
                     </p>
                   </div>
                 )}
