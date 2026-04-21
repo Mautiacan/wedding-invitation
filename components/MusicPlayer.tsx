@@ -3,7 +3,11 @@
 import { Pause, Play, Volume2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-export function MusicPlayer() {
+type MusicPlayerProps = {
+  className?: string;
+};
+
+export function MusicPlayer({ className = "" }: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isReady, setIsReady] = useState(true);
@@ -41,7 +45,7 @@ export function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className={className}>
       <audio ref={audioRef} src="/audio/fantastika.mp3" loop preload="metadata" />
       <button
         type="button"

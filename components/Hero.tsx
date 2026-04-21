@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
+import { MusicPlayer } from "@/components/MusicPlayer";
 import { EVENT_INFO, WEDDING_DATE_ISO } from "@/lib/constants";
 import { formatCountdown } from "@/lib/utils";
 
@@ -73,6 +74,10 @@ export function Hero() {
         >
           {EVENT_INFO.greetingText}
         </motion.p>
+
+        <div className="mt-6 flex justify-center">
+          <MusicPlayer className="flex flex-col items-center" />
+        </div>
 
         <div className="mx-auto mt-6 flex w-fit flex-wrap items-center justify-center gap-2">
           <span className="rounded-full border border-forest-bark/15 bg-white/65 px-4 py-1 text-xs uppercase tracking-[0.18em] text-forest-bark/70">
