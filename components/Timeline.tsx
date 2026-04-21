@@ -26,11 +26,7 @@ export function Timeline() {
                   className="glass-card relative ml-12 p-5 sm:mx-auto sm:grid sm:max-w-2xl sm:grid-cols-[1fr_auto_1fr] sm:items-center"
                 >
                   <div className="hidden sm:block">
-                    {index % 2 === 0 && (
-                      <p className="text-right font-serif text-2xl text-forest-bark">
-                        {item.time}
-                      </p>
-                    )}
+                    <p className="text-right font-serif text-2xl text-forest-bark">{item.time}</p>
                   </div>
                   <div className="absolute -left-10 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-forest-bark/20 bg-forest-cream text-forest-bark sm:static sm:mx-6 sm:h-12 sm:w-12 sm:translate-y-0">
                     <Icon size={18} />
