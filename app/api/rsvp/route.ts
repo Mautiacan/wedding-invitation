@@ -103,17 +103,23 @@ export async function POST(request: Request) {
       submittedAt: new Date().toISOString()
     };
 
-    await fs.mkdir(dataDir, { recursive: true });
-
-    let existing: RsvpEntry[] = [];
+    // Vercel/serverless file system can be readonly or ephemeral, so local file writes
+    // are best-effort and should not block RSVP delivery.
     try {
-      const fileContent = await fs.readFile(dataFile, "utf8");
-      existing = safeParse(fileContent);
-    } catch {
-      existing = [];
-    }
+      await fs.mkdir(dataDir, { recursive: true });
 
-    await fs.writeFile(dataFile, JSON.stringify([...existing, newEntry], null, 2), "utf8");
+      let existing: RsvpEntry[] = [];
+      try {
+        const fileContent = await fs.readFile(dataFile, "utf8");
+        existing = safeParse(fileContent);
+      } catch {
+        existing = [];
+      }
+
+      await fs.writeFile(dataFile, JSON.stringify([...existing, newEntry], null, 2), "utf8");
+    } catch {
+      // Ignore local persistence errors in production environments.
+    }
 
     // External notifications should not break RSVP saving.
     await Promise.allSettled([
