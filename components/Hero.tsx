@@ -52,36 +52,6 @@ export function Hero() {
       <motion.div style={{ y }} className="pointer-events-none absolute inset-0">
         <div className="texture-overlay h-full w-full opacity-15" />
       </motion.div>
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <svg
-          className="absolute -left-4 bottom-20 h-56 w-28 text-[#5d7f4f]/45"
-          viewBox="0 0 120 260"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path d="M18 260V60" stroke="currentColor" strokeWidth="4" />
-          <ellipse cx="34" cy="80" rx="18" ry="32" fill="currentColor" transform="rotate(-24 34 80)" />
-          <ellipse cx="52" cy="120" rx="16" ry="28" fill="currentColor" transform="rotate(-18 52 120)" />
-          <ellipse cx="30" cy="148" rx="14" ry="24" fill="currentColor" transform="rotate(-30 30 148)" />
-          <ellipse cx="50" cy="186" rx="13" ry="22" fill="currentColor" transform="rotate(-12 50 186)" />
-        </svg>
-        <svg
-          className="absolute -right-4 bottom-24 h-60 w-32 text-[#5d7f4f]/40"
-          viewBox="0 0 130 280"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path d="M108 280V58" stroke="currentColor" strokeWidth="4" />
-          <ellipse cx="92" cy="84" rx="17" ry="30" fill="currentColor" transform="rotate(22 92 84)" />
-          <ellipse cx="74" cy="122" rx="15" ry="26" fill="currentColor" transform="rotate(18 74 122)" />
-          <ellipse cx="98" cy="154" rx="13" ry="24" fill="currentColor" transform="rotate(26 98 154)" />
-          <ellipse cx="78" cy="190" rx="12" ry="22" fill="currentColor" transform="rotate(14 78 190)" />
-        </svg>
-        <div className="absolute left-[18%] top-[14%] h-12 w-12 rounded-full bg-[#7da265]/35 blur-[0.5px]" />
-        <div className="absolute left-[72%] top-[18%] h-14 w-14 rounded-full bg-[#7da265]/30 blur-[0.5px]" />
-        <div className="absolute left-[64%] top-[62%] h-10 w-10 rounded-full bg-[#7da265]/28 blur-[0.5px]" />
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#6f925a]/14 to-transparent" />
-      </div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f8f1df]/70 to-[#efe2c8]/82" />
       <div className="section-shell relative z-10">
         <motion.p

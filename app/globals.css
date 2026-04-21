@@ -22,18 +22,39 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 140px;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.95;
+  opacity: 1;
   background-image:
-    radial-gradient(circle at 8% 14%, rgba(126, 163, 98, 0.28) 0, rgba(126, 163, 98, 0.28) 36px, transparent 37px),
-    radial-gradient(circle at 92% 12%, rgba(126, 163, 98, 0.22) 0, rgba(126, 163, 98, 0.22) 30px, transparent 31px),
-    radial-gradient(circle at 16% 46%, rgba(126, 163, 98, 0.2) 0, rgba(126, 163, 98, 0.2) 22px, transparent 23px),
-    radial-gradient(circle at 88% 44%, rgba(126, 163, 98, 0.22) 0, rgba(126, 163, 98, 0.22) 28px, transparent 29px),
-    radial-gradient(circle at 10% 78%, rgba(126, 163, 98, 0.24) 0, rgba(126, 163, 98, 0.24) 32px, transparent 33px),
-    radial-gradient(circle at 90% 82%, rgba(126, 163, 98, 0.24) 0, rgba(126, 163, 98, 0.24) 32px, transparent 33px),
-    radial-gradient(circle at 50% 70%, rgba(126, 163, 98, 0.16) 0, rgba(126, 163, 98, 0.16) 24px, transparent 25px);
+    radial-gradient(56px 88px at 32px 120px, rgba(111, 146, 90, 0.34), transparent 72%),
+    radial-gradient(46px 74px at 58px 198px, rgba(102, 135, 84, 0.3), transparent 70%),
+    radial-gradient(40px 66px at 36px 266px, rgba(102, 135, 84, 0.28), transparent 70%),
+    radial-gradient(34px 58px at 62px 340px, rgba(111, 146, 90, 0.28), transparent 72%),
+    linear-gradient(180deg, rgba(111, 146, 90, 0.3), rgba(111, 146, 90, 0.3));
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 4px 320px;
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 0 0, 0 0, 46px 112px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+  background-image:
+    radial-gradient(52px 80px at 108px 146px, rgba(111, 146, 90, 0.28), transparent 72%),
+    radial-gradient(38px 60px at 84px 246px, rgba(102, 135, 84, 0.24), transparent 72%),
+    radial-gradient(34px 54px at 110px 332px, rgba(111, 146, 90, 0.24), transparent 72%);
+  background-repeat: no-repeat;
 }
 
 .section-shell {
