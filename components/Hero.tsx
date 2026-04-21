@@ -53,11 +53,43 @@ export function Hero() {
         <div className="texture-overlay h-full w-full opacity-15" />
       </motion.div>
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-10 top-20 h-40 w-20 rotate-[-20deg] rounded-[60%_40%_55%_45%] bg-[#7fa06f]/18 blur-[1px]" />
-        <div className="absolute left-8 top-36 h-32 w-16 rotate-[10deg] rounded-[55%_45%_60%_40%] bg-[#6e8f5f]/15 blur-[1px]" />
-        <div className="absolute -right-8 top-24 h-44 w-24 rotate-[18deg] rounded-[52%_48%_62%_38%] bg-[#7fa06f]/18 blur-[1px]" />
-        <div className="absolute right-10 top-44 h-28 w-14 rotate-[-8deg] rounded-[58%_42%_54%_46%] bg-[#6e8f5f]/14 blur-[1px]" />
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#7a9a62]/14 to-transparent" />
+        <svg
+          className="absolute -left-4 bottom-20 h-56 w-28 text-[#5d7f4f]/45"
+          viewBox="0 0 120 260"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M18 260V60" stroke="currentColor" strokeWidth="4" />
+          <ellipse cx="34" cy="80" rx="18" ry="32" fill="currentColor" transform="rotate(-24 34 80)" />
+          <ellipse cx="52" cy="120" rx="16" ry="28" fill="currentColor" transform="rotate(-18 52 120)" />
+          <ellipse cx="30" cy="148" rx="14" ry="24" fill="currentColor" transform="rotate(-30 30 148)" />
+          <ellipse cx="50" cy="186" rx="13" ry="22" fill="currentColor" transform="rotate(-12 50 186)" />
+        </svg>
+        <svg
+          className="absolute -right-4 bottom-24 h-60 w-32 text-[#5d7f4f]/40"
+          viewBox="0 0 130 280"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M108 280V58" stroke="currentColor" strokeWidth="4" />
+          <ellipse cx="92" cy="84" rx="17" ry="30" fill="currentColor" transform="rotate(22 92 84)" />
+          <ellipse cx="74" cy="122" rx="15" ry="26" fill="currentColor" transform="rotate(18 74 122)" />
+          <ellipse cx="98" cy="154" rx="13" ry="24" fill="currentColor" transform="rotate(26 98 154)" />
+          <ellipse cx="78" cy="190" rx="12" ry="22" fill="currentColor" transform="rotate(14 78 190)" />
+        </svg>
+        <svg
+          className="absolute inset-x-0 bottom-0 h-28 w-full text-[#6a8f56]/32"
+          viewBox="0 0 1200 140"
+          preserveAspectRatio="none"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0 140L20 95L40 140L60 82L80 140L100 90L120 140L140 84L160 140L180 92L200 140L220 86L240 140L260 94L280 140L300 88L320 140L340 96L360 140L380 90L400 140L420 85L440 140L460 92L480 140L500 84L520 140L540 95L560 140L580 89L600 140L620 84L640 140L660 96L680 140L700 90L720 140L740 86L760 140L780 94L800 140L820 88L840 140L860 96L880 140L900 90L920 140L940 85L960 140L980 92L1000 140L1020 84L1040 140L1060 95L1080 140L1100 88L1120 140L1140 94L1160 140L1180 90L1200 140V140H0Z"
+            fill="currentColor"
+          />
+        </svg>
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#6f925a]/20 to-transparent" />
       </div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f8f1df]/70 to-[#efe2c8]/82" />
       <div className="section-shell relative z-10">
