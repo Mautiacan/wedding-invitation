@@ -69,12 +69,14 @@ export default function RootLayout({
           <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--left-4" />
           <img src="/decor/list-1.png" alt="" className="side-decor__leaf side-decor__leaf--left-5" />
           <img src="/decor/list-3.png" alt="" className="side-decor__leaf side-decor__leaf--left-6" />
+          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--left-7" />
           <img src="/decor/list-1.png" alt="" className="side-decor__leaf side-decor__leaf--right-1" />
           <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--right-2" />
           <img src="/decor/list-3.png" alt="" className="side-decor__leaf side-decor__leaf--right-3" />
           <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--right-4" />
           <img src="/decor/list-1.png" alt="" className="side-decor__leaf side-decor__leaf--right-5" />
           <img src="/decor/list-3.png" alt="" className="side-decor__leaf side-decor__leaf--right-6" />
+          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--right-7" />
         </div>
         <div className="site-content">{children}</div>
       </body>

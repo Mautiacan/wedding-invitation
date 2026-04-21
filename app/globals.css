@@ -32,108 +32,120 @@ body {
 
 .side-decor__trunk {
   position: absolute;
-  width: 44px;
-  opacity: 0.68;
-  top: 4%;
-  bottom: 4%;
+  width: 52px;
+  opacity: 0.74;
+  top: 0;
+  bottom: 0;
   object-fit: fill;
 }
 
 .side-decor__trunk--left {
-  left: 10px;
+  left: 6px;
 }
 
 .side-decor__trunk--right {
-  right: 10px;
+  right: 6px;
   transform: scaleX(-1);
 }
 
 .side-decor__leaf {
   position: absolute;
-  width: 92px;
-  opacity: 0.78;
+  width: 98px;
+  opacity: 0.82;
 }
 
 .side-decor__leaf--left-1 {
-  left: 0;
-  top: 6%;
-  transform: rotate(-18deg) scale(1.12);
+  left: -4px;
+  top: 2%;
+  transform: rotate(-22deg) scale(1.2);
 }
 
 .side-decor__leaf--left-2 {
-  left: 26px;
-  top: 15%;
-  transform: rotate(14deg) scale(1.02);
+  left: 28px;
+  top: 10%;
+  transform: rotate(18deg) scale(1.08);
 }
 
 .side-decor__leaf--left-3 {
-  left: 2px;
-  top: 25%;
-  transform: rotate(-10deg) scale(0.98);
+  left: -2px;
+  top: 19%;
+  transform: rotate(-14deg) scale(1.02);
 }
 
 .side-decor__leaf--left-4 {
-  left: 24px;
-  top: 37%;
-  transform: rotate(18deg) scale(0.94);
+  left: 26px;
+  top: 30%;
+  transform: rotate(20deg) scale(0.98);
 }
 
 .side-decor__leaf--left-5 {
-  left: 0;
-  top: 51%;
-  transform: rotate(-14deg) scale(0.9);
+  left: -4px;
+  top: 44%;
+  transform: rotate(-18deg) scale(0.95);
 }
 
 .side-decor__leaf--left-6 {
-  left: 22px;
-  top: 67%;
-  transform: rotate(16deg) scale(0.86);
+  left: 24px;
+  top: 60%;
+  transform: rotate(16deg) scale(0.92);
+}
+
+.side-decor__leaf--left-7 {
+  left: 2px;
+  top: 76%;
+  transform: rotate(-14deg) scale(0.9);
 }
 
 .side-decor__leaf--right-1 {
-  right: 0;
-  top: 8%;
-  transform: rotate(18deg) scaleX(-1) scale(1.1);
+  right: -4px;
+  top: 3%;
+  transform: rotate(22deg) scaleX(-1) scale(1.2);
 }
 
 .side-decor__leaf--right-2 {
-  right: 24px;
-  top: 17%;
-  transform: rotate(-12deg) scaleX(-1) scale(1);
+  right: 28px;
+  top: 11%;
+  transform: rotate(-18deg) scaleX(-1) scale(1.08);
 }
 
 .side-decor__leaf--right-3 {
-  right: 0;
-  top: 28%;
-  transform: rotate(10deg) scaleX(-1) scale(0.98);
+  right: -2px;
+  top: 20%;
+  transform: rotate(14deg) scaleX(-1) scale(1.02);
 }
 
 .side-decor__leaf--right-4 {
-  right: 22px;
-  top: 40%;
-  transform: rotate(-16deg) scaleX(-1) scale(0.94);
+  right: 26px;
+  top: 31%;
+  transform: rotate(-20deg) scaleX(-1) scale(0.98);
 }
 
 .side-decor__leaf--right-5 {
-  right: 0;
-  top: 54%;
-  transform: rotate(12deg) scaleX(-1) scale(0.9);
+  right: -4px;
+  top: 45%;
+  transform: rotate(18deg) scaleX(-1) scale(0.95);
 }
 
 .side-decor__leaf--right-6 {
-  right: 20px;
-  top: 69%;
-  transform: rotate(-18deg) scaleX(-1) scale(0.86);
+  right: 24px;
+  top: 61%;
+  transform: rotate(-16deg) scaleX(-1) scale(0.92);
+}
+
+.side-decor__leaf--right-7 {
+  right: 2px;
+  top: 77%;
+  transform: rotate(14deg) scaleX(-1) scale(0.9);
 }
 
 @media (max-width: 900px) {
   .side-decor__trunk {
-    width: 34px;
-    opacity: 0.54;
+    width: 38px;
+    opacity: 0.58;
   }
 
   .side-decor__leaf {
-    width: 64px;
+    width: 68px;
     opacity: 0.62;
   }
 }
