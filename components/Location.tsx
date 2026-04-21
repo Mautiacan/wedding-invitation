@@ -18,7 +18,7 @@ export function Location() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="glass-card mt-8 grid gap-6 p-6 lg:grid-cols-[1fr_1.2fr]"
+          className="glass-card mt-8 grid gap-6 p-6 lg:grid-cols-[1fr_1.2fr] lg:items-center"
         >
           <div>
             <p className="font-serif text-3xl text-[#2f4a2f]">{EVENT_INFO.venue}</p>
@@ -76,7 +76,7 @@ export function Location() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-forest-bark/10">
+          <div className="overflow-hidden rounded-2xl border border-forest-bark/10 lg:self-center">
             <iframe
               title="Карта Forest Park"
               src={MAP_EMBED_URL}
