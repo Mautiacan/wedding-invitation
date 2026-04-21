@@ -30,6 +30,7 @@ export function Hero() {
     ],
     [timer]
   );
+  const couplePhotoSources = ["/photos/us-1. jpg.jpg", "/photos/us-2. jpg.jpg", "/photos/us-3. jpg.jpg"];
 
   return (
     <section
@@ -119,14 +120,14 @@ export function Hero() {
         </motion.div>
 
         <div className="mx-auto mt-10 grid max-w-5xl gap-3 sm:grid-cols-3">
-          {["/photos/us-1.jpg", "/photos/us-2.jpg", "/photos/us-3.jpg"].map((src, index) => (
+          {couplePhotoSources.map((src, index) => (
             <div
               key={src}
               className="overflow-hidden rounded-2xl border border-forest-moss/20 bg-white/70"
             >
               {!photoError[src] ? (
                 <img
-                  src={src}
+                  src={encodeURI(src)}
                   alt={`Фото пары ${index + 1}`}
                   className="h-52 w-full object-cover"
                   loading="lazy"
