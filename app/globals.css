@@ -18,6 +18,126 @@ body {
     linear-gradient(180deg, #f8f1df 0%, #f4ead4 55%, #efe2c8 100%);
 }
 
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+
+.side-decor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.side-decor__trunk {
+  position: absolute;
+  width: 44px;
+  opacity: 0.68;
+  top: 4%;
+  bottom: 4%;
+  object-fit: fill;
+}
+
+.side-decor__trunk--left {
+  left: 10px;
+}
+
+.side-decor__trunk--right {
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+.side-decor__leaf {
+  position: absolute;
+  width: 92px;
+  opacity: 0.78;
+}
+
+.side-decor__leaf--left-1 {
+  left: 0;
+  top: 6%;
+  transform: rotate(-18deg) scale(1.12);
+}
+
+.side-decor__leaf--left-2 {
+  left: 26px;
+  top: 15%;
+  transform: rotate(14deg) scale(1.02);
+}
+
+.side-decor__leaf--left-3 {
+  left: 2px;
+  top: 25%;
+  transform: rotate(-10deg) scale(0.98);
+}
+
+.side-decor__leaf--left-4 {
+  left: 24px;
+  top: 37%;
+  transform: rotate(18deg) scale(0.94);
+}
+
+.side-decor__leaf--left-5 {
+  left: 0;
+  top: 51%;
+  transform: rotate(-14deg) scale(0.9);
+}
+
+.side-decor__leaf--left-6 {
+  left: 22px;
+  top: 67%;
+  transform: rotate(16deg) scale(0.86);
+}
+
+.side-decor__leaf--right-1 {
+  right: 0;
+  top: 8%;
+  transform: rotate(18deg) scaleX(-1) scale(1.1);
+}
+
+.side-decor__leaf--right-2 {
+  right: 24px;
+  top: 17%;
+  transform: rotate(-12deg) scaleX(-1) scale(1);
+}
+
+.side-decor__leaf--right-3 {
+  right: 0;
+  top: 28%;
+  transform: rotate(10deg) scaleX(-1) scale(0.98);
+}
+
+.side-decor__leaf--right-4 {
+  right: 22px;
+  top: 40%;
+  transform: rotate(-16deg) scaleX(-1) scale(0.94);
+}
+
+.side-decor__leaf--right-5 {
+  right: 0;
+  top: 54%;
+  transform: rotate(12deg) scaleX(-1) scale(0.9);
+}
+
+.side-decor__leaf--right-6 {
+  right: 20px;
+  top: 69%;
+  transform: rotate(-18deg) scaleX(-1) scale(0.86);
+}
+
+@media (max-width: 900px) {
+  .side-decor__trunk {
+    width: 34px;
+    opacity: 0.54;
+  }
+
+  .side-decor__leaf {
+    width: 64px;
+    opacity: 0.62;
+  }
+}
+
 .section-shell {
   @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
 }
