@@ -16,54 +16,6 @@ body {
     radial-gradient(circle at 14% 12%, rgba(244, 233, 205, 0.42), transparent 34%),
     radial-gradient(circle at 86% 18%, rgba(233, 217, 184, 0.3), transparent 36%),
     linear-gradient(180deg, #f8f1df 0%, #f4ead4 55%, #efe2c8 100%);
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 210px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 1;
-  width: 78px;
-  height: 126px;
-  top: 8%;
-  left: 18px;
-  bottom: auto;
-  border-radius: 999px;
-  background: rgba(97, 136, 71, 0.7);
-  transform: rotate(-18deg);
-  box-shadow:
-    32px 96px 0 -8px rgba(87, 124, 65, 0.66),
-    8px 214px 0 -10px rgba(97, 136, 71, 0.64),
-    28px 324px 0 -12px rgba(87, 124, 65, 0.62),
-    6px 438px 0 -11px rgba(97, 136, 71, 0.6),
-    24px 552px 0 -13px rgba(87, 124, 65, 0.58);
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  right: 18px;
-  top: 10%;
-  width: 74px;
-  height: 120px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 1;
-  border-radius: 999px;
-  background: rgba(97, 136, 71, 0.66);
-  transform: rotate(16deg);
-  box-shadow:
-    -28px 112px 0 -9px rgba(87, 124, 65, 0.62),
-    -6px 238px 0 -11px rgba(97, 136, 71, 0.6),
-    -24px 354px 0 -12px rgba(87, 124, 65, 0.58),
-    -4px 474px 0 -11px rgba(97, 136, 71, 0.56),
-    -20px 590px 0 -12px rgba(87, 124, 65, 0.54);
 }
 
 .section-shell {
