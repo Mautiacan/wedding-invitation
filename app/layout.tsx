@@ -59,27 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${inter.variable} ${playfair.variable}`}>
-        <div className="side-decor" aria-hidden="true">
-          <img src="/decor/stvol-1.png" alt="" className="side-decor__trunk side-decor__trunk--left" />
-          <img src="/decor/stvol-1.png" alt="" className="side-decor__trunk side-decor__trunk--right" />
-          <img src="/decor/list-1.png" alt="" className="side-decor__leaf side-decor__leaf--left-1" />
-          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--left-2" />
-          <img src="/decor/list-3.png" alt="" className="side-decor__leaf side-decor__leaf--left-3" />
-          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--left-4" />
-          <img src="/decor/list-1.png" alt="" className="side-decor__leaf side-decor__leaf--left-5" />
-          <img src="/decor/list-3.png" alt="" className="side-decor__leaf side-decor__leaf--left-6" />
-          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--left-7" />
-          <img src="/decor/list-1.png" alt="" className="side-decor__leaf side-decor__leaf--right-1" />
-          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--right-2" />
-          <img src="/decor/list-3.png" alt="" className="side-decor__leaf side-decor__leaf--right-3" />
-          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--right-4" />
-          <img src="/decor/list-1.png" alt="" className="side-decor__leaf side-decor__leaf--right-5" />
-          <img src="/decor/list-3.png" alt="" className="side-decor__leaf side-decor__leaf--right-6" />
-          <img src="/decor/list-2.png" alt="" className="side-decor__leaf side-decor__leaf--right-7" />
-        </div>
-        <div className="site-content">{children}</div>
-      </body>
+      <body className={`${inter.variable} ${playfair.variable}`}>{children}</body>
     </html>
   );
 }
