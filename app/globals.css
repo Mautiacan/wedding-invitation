@@ -25,19 +25,24 @@ body::before {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 140px;
+  width: 170px;
   pointer-events: none;
   z-index: 0;
   opacity: 1;
   background-image:
-    radial-gradient(56px 88px at 32px 120px, rgba(111, 146, 90, 0.34), transparent 72%),
-    radial-gradient(46px 74px at 58px 198px, rgba(102, 135, 84, 0.3), transparent 70%),
-    radial-gradient(40px 66px at 36px 266px, rgba(102, 135, 84, 0.28), transparent 70%),
-    radial-gradient(34px 58px at 62px 340px, rgba(111, 146, 90, 0.28), transparent 72%),
-    linear-gradient(180deg, rgba(111, 146, 90, 0.3), rgba(111, 146, 90, 0.3));
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 4px 320px;
+    radial-gradient(42px 72px at 44px 10%, rgba(97, 136, 71, 0.62), transparent 74%),
+    radial-gradient(36px 64px at 70px 18%, rgba(87, 124, 65, 0.56), transparent 74%),
+    radial-gradient(34px 58px at 40px 26%, rgba(97, 136, 71, 0.52), transparent 74%),
+    radial-gradient(30px 52px at 64px 34%, rgba(87, 124, 65, 0.5), transparent 74%),
+    radial-gradient(30px 52px at 40px 44%, rgba(97, 136, 71, 0.5), transparent 74%),
+    radial-gradient(26px 46px at 62px 54%, rgba(87, 124, 65, 0.48), transparent 74%),
+    radial-gradient(28px 48px at 40px 66%, rgba(97, 136, 71, 0.5), transparent 74%),
+    radial-gradient(24px 42px at 60px 78%, rgba(87, 124, 65, 0.46), transparent 74%),
+    radial-gradient(24px 40px at 40px 90%, rgba(97, 136, 71, 0.44), transparent 74%),
+    linear-gradient(180deg, transparent 0%, rgba(103, 141, 79, 0.78) 6%, rgba(103, 141, 79, 0.78) 94%, transparent 100%);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: 0 0, 0 0, 0 0, 0 0, 46px 112px;
+  background-position: 0 0;
 }
 
 body::after {
@@ -46,15 +51,18 @@ body::after {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 140px;
+  width: 170px;
   pointer-events: none;
   z-index: 0;
   opacity: 1;
   background-image:
-    radial-gradient(52px 80px at 108px 146px, rgba(111, 146, 90, 0.28), transparent 72%),
-    radial-gradient(38px 60px at 84px 246px, rgba(102, 135, 84, 0.24), transparent 72%),
-    radial-gradient(34px 54px at 110px 332px, rgba(111, 146, 90, 0.24), transparent 72%);
+    radial-gradient(42px 72px at 126px 12%, rgba(97, 136, 71, 0.42), transparent 74%),
+    radial-gradient(34px 58px at 102px 24%, rgba(87, 124, 65, 0.38), transparent 74%),
+    radial-gradient(30px 52px at 128px 40%, rgba(97, 136, 71, 0.36), transparent 74%),
+    radial-gradient(28px 48px at 106px 58%, rgba(87, 124, 65, 0.34), transparent 74%),
+    radial-gradient(24px 42px at 130px 76%, rgba(97, 136, 71, 0.32), transparent 74%);
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .section-shell {
