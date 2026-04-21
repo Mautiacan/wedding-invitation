@@ -11,6 +11,7 @@ const targetDate = new Date(WEDDING_DATE_ISO);
 export function Hero() {
   const [timer, setTimer] = useState(() => formatCountdown(targetDate));
   const [photoError, setPhotoError] = useState<Record<string, boolean>>({});
+  const [heroBgFailed, setHeroBgFailed] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 120]);
 
@@ -38,9 +39,27 @@ export function Hero() {
       id="hero"
       className="relative overflow-hidden pb-20 pt-28 sm:pt-32"
     >
+      {!heroBgFailed && (
+        <div className="pointer-events-none absolute inset-0">
+          <img
+            src="/bg-hero.jpg"
+            alt=""
+            className="h-full w-full scale-105 object-cover opacity-15 blur-[2px]"
+            onError={() => setHeroBgFailed(true)}
+          />
+        </div>
+      )}
       <motion.div style={{ y }} className="pointer-events-none absolute inset-0">
         <div className="texture-overlay h-full w-full opacity-15" />
       </motion.div>
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-10 top-20 h-40 w-20 rotate-[-20deg] rounded-[60%_40%_55%_45%] bg-[#7fa06f]/18 blur-[1px]" />
+        <div className="absolute left-8 top-36 h-32 w-16 rotate-[10deg] rounded-[55%_45%_60%_40%] bg-[#6e8f5f]/15 blur-[1px]" />
+        <div className="absolute -right-8 top-24 h-44 w-24 rotate-[18deg] rounded-[52%_48%_62%_38%] bg-[#7fa06f]/18 blur-[1px]" />
+        <div className="absolute right-10 top-44 h-28 w-14 rotate-[-8deg] rounded-[58%_42%_54%_46%] bg-[#6e8f5f]/14 blur-[1px]" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#7a9a62]/14 to-transparent" />
+      </div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#f8f1df]/70 to-[#efe2c8]/82" />
       <div className="section-shell relative z-10">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
