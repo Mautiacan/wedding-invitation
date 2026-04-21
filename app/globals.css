@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-forest-cream text-forest-moss font-sans antialiased;
+  background-image:
+    radial-gradient(circle at 14% 12%, rgba(244, 233, 205, 0.42), transparent 34%),
+    radial-gradient(circle at 86% 18%, rgba(233, 217, 184, 0.3), transparent 36%),
+    linear-gradient(180deg, #f8f1df 0%, #f4ead4 55%, #efe2c8 100%);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply font-serif text-3xl sm:text-4xl;
+  color: #2f5530;
+}
+
+.glass-card {
+  @apply rounded-3xl border border-forest-bark/10 bg-white/80 shadow-warm backdrop-blur;
+}
+
+.section-divider-top {
+  position: relative;
+}
+
+.section-divider-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(560px, calc(100% - 2rem));
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(47, 74, 47, 0),
+    rgba(47, 74, 47, 0.2),
+    rgba(47, 74, 47, 0)
+  );
+}
+
+.texture-overlay {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(227, 208, 150, 0.28), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(216, 189, 121, 0.2), transparent 38%);
+}
