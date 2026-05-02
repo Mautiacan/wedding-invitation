@@ -1,16 +1,21 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { MusicPlayer } from "@/components/MusicPlayer";
 import { EVENT_INFO, WEDDING_DATE_ISO } from "@/lib/constants";
 import { formatCountdown } from "@/lib/utils";
 
+const CircularGallery = dynamic(
+  () => import("@/components/CircularGallery"),
+  { ssr: false }
+);
+
 const targetDate = new Date(WEDDING_DATE_ISO);
 
 export function Hero() {
   const [timer, setTimer] = useState(() => formatCountdown(targetDate));
-  const [photoError, setPhotoError] = useState<Record<string, boolean>>({});
   const [heroBgFailed, setHeroBgFailed] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 120]);
@@ -32,7 +37,15 @@ export function Hero() {
     ],
     [timer]
   );
-  const couplePhotoSources = ["/photos/us-1. jpg.jpg", "/photos/us-2. jpg.jpg", "/photos/us-3. jpg.jpg"];
+  const galleryItems = useMemo(
+    () =>
+      [
+        "/photos/us-1. jpg.jpg",
+        "/photos/us-2. jpg.jpg",
+        "/photos/us-3. jpg.jpg"
+      ].map((src) => ({ image: encodeURI(src), text: "" })),
+    []
+  );
 
   return (
     <section
@@ -136,27 +149,20 @@ export function Hero() {
           </a>
         </motion.div>
 
-        <div className="mx-auto mt-10 grid max-w-5xl gap-3 sm:grid-cols-3">
-          {couplePhotoSources.map((src, index) => (
-            <div
-              key={src}
-              className="overflow-hidden rounded-2xl border border-forest-moss/20 bg-white/70"
-            >
-              {!photoError[src] ? (
-                <img
-                  src={encodeURI(src)}
-                  alt={`Фото пары ${index + 1}`}
-                  className="h-52 w-full object-cover"
-                  loading="lazy"
-                  onError={() => setPhotoError((prev) => ({ ...prev, [src]: true }))}
-                />
-              ) : (
-                <div className="flex h-52 items-center justify-center px-4 text-center text-sm text-forest-moss/75">
-                  Добавьте фото в <code>{`public${src}`}</code>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="mx-auto mt-10 w-full max-w-5xl">
+          <div className="relative h-[380px] overflow-hidden rounded-3xl border border-forest-moss/20 bg-white/40 sm:h-[460px] lg:h-[520px]">
+            <CircularGallery
+              items={galleryItems}
+              bend={2}
+              textColor="#3A5E3A"
+              borderRadius={0.05}
+              scrollSpeed={2}
+              scrollEase={0.05}
+            />
+          </div>
+          <p className="mt-3 text-center text-xs uppercase tracking-[0.2em] text-forest-bark/60">
+            Потяните фото в сторону, чтобы листать
+          </p>
         </div>
       </div>
     </section>
