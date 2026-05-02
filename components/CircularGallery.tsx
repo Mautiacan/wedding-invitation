@@ -11,6 +11,8 @@ import {
 } from "ogl";
 import { useEffect, useRef } from "react";
 
+type OGLRenderingContext = InstanceType<typeof Renderer>["gl"];
+
 import "./CircularGallery.css";
 
 export type GalleryItem = {
@@ -44,7 +46,7 @@ function lerp(p1: number, p2: number, t: number) {
 }
 
 function createTextTexture(
-  gl: WebGLRenderingContext,
+  gl: OGLRenderingContext,
   text: string,
   font = "bold 30px sans-serif",
   color = "#3A5E3A"
@@ -72,7 +74,7 @@ function createTextTexture(
 }
 
 type TitleParams = {
-  gl: WebGLRenderingContext;
+  gl: OGLRenderingContext;
   plane: Mesh;
   text: string;
   textColor?: string;
@@ -80,7 +82,7 @@ type TitleParams = {
 };
 
 class Title {
-  private gl: WebGLRenderingContext;
+  private gl: OGLRenderingContext;
   private plane: Mesh;
   private text: string;
   private textColor: string;
@@ -147,7 +149,7 @@ class Title {
 
 type MediaParams = {
   geometry: Plane;
-  gl: WebGLRenderingContext;
+  gl: OGLRenderingContext;
   image: string;
   index: number;
   length: number;
@@ -164,7 +166,7 @@ type MediaParams = {
 class Media {
   extra = 0;
   private geometry: Plane;
-  private gl: WebGLRenderingContext;
+  private gl: OGLRenderingContext;
   private image: string;
   private index: number;
   private length: number;
@@ -391,7 +393,7 @@ type AppOptions = {
 class App {
   private container: HTMLElement;
   private renderer!: Renderer;
-  private gl!: WebGLRenderingContext;
+  private gl!: OGLRenderingContext;
   private camera!: Camera;
   private scene!: Transform;
   private planeGeometry!: Plane;
