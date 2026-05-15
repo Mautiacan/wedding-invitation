@@ -3,9 +3,12 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 
+type Day2Attendance = "Да" | "Нет" | "Думаю / не уверен(а)";
+
 type RsvpEntry = {
   fullName: string;
   attendance: "Да" | "Нет";
+  day2Attendance: Day2Attendance;
   transport: "Самостоятельно" | "Нужен трансфер";
   drinkPreferences: string;
   hasAllergy: "Нет" | "Да";
@@ -20,6 +23,7 @@ export function RSVP() {
   const [form, setForm] = useState({
     fullName: "",
     attendance: "Да",
+    day2Attendance: "Да" as Day2Attendance,
     transport: "Самостоятельно",
     drinkSoft: false,
     drinkAlcoholic: false,
@@ -71,6 +75,7 @@ export function RSVP() {
     const payload: RsvpEntry = {
       fullName: form.fullName,
       attendance: form.attendance as "Да" | "Нет",
+      day2Attendance: form.day2Attendance,
       transport: form.transport as "Самостоятельно" | "Нужен трансфер",
       drinkPreferences: buildDrinkPreferences(),
       hasAllergy: form.hasAllergy as "Нет" | "Да",
@@ -99,6 +104,7 @@ export function RSVP() {
       setForm({
         fullName: "",
         attendance: "Да",
+        day2Attendance: "Да",
         transport: "Самостоятельно",
         drinkSoft: false,
         drinkAlcoholic: false,
@@ -155,6 +161,24 @@ export function RSVP() {
             >
               <option value="Да">Да</option>
               <option value="Нет">Нет</option>
+            </select>
+          </label>
+
+          <label className="grid gap-2 text-sm text-forest-bark">
+            Планируете ли вы быть на второй день празднования?
+            <select
+              value={form.day2Attendance}
+              onChange={(e) =>
+                setForm((prev) => ({
+                  ...prev,
+                  day2Attendance: e.target.value as Day2Attendance
+                }))
+              }
+              className="rounded-xl border border-forest-bark/20 bg-white px-4 py-3 outline-none transition focus:border-forest-moss"
+            >
+              <option value="Да">Да</option>
+              <option value="Нет">Нет</option>
+              <option value="Думаю / не уверен(а)">Думаю / не уверен(а)</option>
             </select>
           </label>
 

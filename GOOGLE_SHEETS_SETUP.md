@@ -7,6 +7,7 @@ Create a Google Sheet with the first row:
 - submittedAt
 - fullName
 - attendance
+- day2Attendance
 - transport
 - drinkPreferences
 - hasAllergy
@@ -26,6 +27,7 @@ function doPost(e) {
     data.submittedAt || "",
     data.fullName || "",
     data.attendance || "",
+    data.day2Attendance || "",
     data.transport || "",
     data.drinkPreferences || "",
     data.hasAllergy || "",

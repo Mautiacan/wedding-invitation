@@ -2,9 +2,12 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { NextResponse } from "next/server";
 
+type Day2Attendance = "Да" | "Нет" | "Думаю / не уверен(а)";
+
 type RsvpEntry = {
   fullName: string;
   attendance: "Да" | "Нет";
+  day2Attendance: Day2Attendance;
   transport: "Самостоятельно" | "Нужен трансфер";
   drinkPreferences: string;
   hasAllergy: "Нет" | "Да";
@@ -18,6 +21,12 @@ const dataFile = path.join(dataDir, "rsvp.json");
 const telegramToken = process.env.TELEGRAM_BOT_TOKEN;
 const telegramChatId = process.env.TELEGRAM_CHAT_ID;
 const googleSheetsWebhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+
+const parseDay2Attendance = (value: unknown): Day2Attendance => {
+  if (value === "Нет") return "Нет";
+  if (value === "Думаю / не уверен(а)") return "Думаю / не уверен(а)";
+  return "Да";
+};
 
 const safeParse = (value: string): RsvpEntry[] => {
   try {
@@ -38,6 +47,7 @@ const sendTelegramNotification = async (entry: RsvpEntry) => {
     "",
     `Имя: ${entry.fullName}`,
     `Присутствие: ${entry.attendance}`,
+    `Второй день: ${entry.day2Attendance}`,
     `Маршрут: ${entry.transport}`,
     `Предпочтения по напиткам: ${entry.drinkPreferences || "-"}`,
     `Аллергия: ${entry.hasAllergy}`,
@@ -72,6 +82,7 @@ const sendGoogleSheetsNotification = async (entry: RsvpEntry) => {
       submittedAt: entry.submittedAt,
       fullName: entry.fullName,
       attendance: entry.attendance,
+      day2Attendance: entry.day2Attendance,
       transport: entry.transport,
       drinkPreferences: entry.drinkPreferences || "-",
       hasAllergy: entry.hasAllergy,
@@ -92,7 +103,7 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!body.fullName || !body.attendance || !body.transport) {
+  if (!body.fullName || !body.attendance || !body.day2Attendance || !body.transport) {
     return NextResponse.json(
       { message: "Пожалуйста, заполните обязательные поля." },
       { status: 400 }
@@ -103,6 +114,7 @@ export async function POST(request: Request) {
     const newEntry: RsvpEntry = {
       fullName: body.fullName.trim(),
       attendance: body.attendance === "Нет" ? "Нет" : "Да",
+      day2Attendance: parseDay2Attendance(body.day2Attendance),
       transport: body.transport === "Нужен трансфер" ? "Нужен трансфер" : "Самостоятельно",
       drinkPreferences: body.drinkPreferences?.trim() ?? "",
       hasAllergy: body.hasAllergy === "Да" ? "Да" : "Нет",
