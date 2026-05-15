@@ -8,7 +8,7 @@ export function DressCode() {
     <section id="dress-code" className="section-divider-top py-20">
       <div className="section-shell">
         <h2 className="section-title text-center">Дресс-код</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-forest-bark/80">
+        <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-forest-bark/90 sm:text-lg">
           Мы очень старались сделать наш праздник красивым, и будем рады если вы в своем
           наряде поддержите цветовую гамму нашей свадьбы.
         </p>
