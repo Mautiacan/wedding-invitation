@@ -13,6 +13,11 @@ export function Location() {
     <section id="location" className="section-divider-top py-20">
       <div className="section-shell">
         <h2 className="section-title text-center">Место проведения</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-forest-bark/90 sm:text-lg">
+          Свадебный вечер пройдет на природе. Для вашего удобства просим взять с собой
+          удобную обувь для улицы и танцев. И не забудьте взять с собой что-нибудь теплое,
+          вечером может стать прохладно.
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
