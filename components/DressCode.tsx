@@ -8,14 +8,14 @@ export function DressCode() {
     <section id="dress-code" className="section-divider-top py-20">
       <div className="section-shell">
         <h2 className="section-title text-center">Дресс-код</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-forest-bark/80">
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-forest-bark/80">
           Мы очень старались сделать наш праздник красивым, и будем рады если вы в своем
           наряде поддержите цветовую гамму нашей свадьбы.
         </p>
-        <p className="mx-auto mt-3 max-w-3xl text-center text-sm text-forest-bark/75">
-          Свадебный вечер пройдет на открытой площадке. Для вашего удобства просим взять с
-          собой удобную обувь для улицы и танцев. И не забудьте взять с собой что-нибудь
-          теплое, вечером может стать прохладно.
+        <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-forest-bark/90 sm:text-lg">
+          Свадебный вечер пройдет на природе. Для вашего удобства просим взять с собой
+          удобную обувь для улицы и танцев. И не забудьте взять с собой что-нибудь теплое,
+          вечером может стать прохладно.
         </p>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
