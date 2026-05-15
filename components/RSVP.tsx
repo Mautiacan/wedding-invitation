@@ -165,7 +165,7 @@ export function RSVP() {
           </label>
 
           <label className="grid gap-2 text-sm text-forest-bark">
-            Планируете ли вы быть на второй день празднования?
+            Планируете ли вы быть на втором дне празднования?
             <select
               value={form.day2Attendance}
               onChange={(e) =>
