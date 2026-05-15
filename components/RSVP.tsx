@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 
-type Day2Attendance = "Да" | "Нет" | "Думаю / не уверен(а)";
+type Day2Attendance = "Да" | "Нет" | "Не знаю";
 
 type RsvpEntry = {
   fullName: string;
@@ -178,12 +178,12 @@ export function RSVP() {
             >
               <option value="Да">Да</option>
               <option value="Нет">Нет</option>
-              <option value="Думаю / не уверен(а)">Думаю / не уверен(а)</option>
+              <option value="Не знаю">Не знаю</option>
             </select>
           </label>
 
           <label className="grid gap-2 text-sm text-forest-bark">
-            Как планируете добираться?
+            Как планируете добираться на свадьбу?
             <select
               value={form.transport}
               onChange={(e) =>

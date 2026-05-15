@@ -2,7 +2,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { NextResponse } from "next/server";
 
-type Day2Attendance = "Да" | "Нет" | "Думаю / не уверен(а)";
+type Day2Attendance = "Да" | "Нет" | "Не знаю";
 
 type RsvpEntry = {
   fullName: string;
@@ -24,7 +24,7 @@ const googleSheetsWebhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
 
 const parseDay2Attendance = (value: unknown): Day2Attendance => {
   if (value === "Нет") return "Нет";
-  if (value === "Думаю / не уверен(а)") return "Думаю / не уверен(а)";
+  if (value === "Не знаю") return "Не знаю";
   return "Да";
 };
 
