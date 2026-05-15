@@ -42,7 +42,9 @@ export function Hero() {
       [
         "/photos/us-1. jpg.jpg",
         "/photos/us-2. jpg.jpg",
-        "/photos/us-3. jpg.jpg"
+        "/photos/us-3. jpg.jpg",
+        "/photos/us-4.jpg",
+        "/photos/us-5.jpg"
       ].map((src) => ({ image: encodeURI(src), text: "" })),
     []
   );
